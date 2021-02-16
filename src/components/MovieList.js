@@ -50,7 +50,7 @@ export const MovieList = (props) => {
                       <div className="absolute top-0 right-0 rounded-full px-2 py-0.5 items-center space-x-1 whitespace-pre w-10 h-lg">
                        
                       <Link to={`/movie/${movie.id}`}>
-                         <button className="flex items-center justify-center rounded-md bg-info text-white p-2" type="submit">
+                         <button className="flex items-center justify-center rounded-md bg-info hover:bg-infoHover text-white p-2" type="submit">
                             ver
                           </button>
                       </Link>

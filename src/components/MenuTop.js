@@ -5,15 +5,15 @@ import Logo from '../assets/img/logo.svg';
 
 export const MenuTop = () => {
     return (
-        <div className="flex space-x-12  ml-5">
-            <div className="inline-block ">
+        <div className="flex space-x-12 ml-5">
+            <div className="inline-block" style={{zIndex: 1}}>
             <img
                     src={Logo}
                     alt="logo"
                     className="h-10 w-10"                  
                   />
             </div>
-            <div className="space-x-6 space-y-2">
+            <div className="space-x-6 space-y-2" style={{zIndex: 1}}>
                 <div className="inline-block">
                     <Link className="text-gray-300 hover:text-white" to="/">Home</Link>
                 </div>
@@ -27,7 +27,6 @@ export const MenuTop = () => {
                     <Link className="text-gray-300 hover:text-white"  to="/">Bucador</Link>
                 </div>
             </div>
-            
-        </div>
+            </div>
     )
 }

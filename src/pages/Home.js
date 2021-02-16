@@ -11,6 +11,7 @@ export const Home = () => {
 
     const popularMovies = useFetch(
         `${URL_API}/movie/popular?api_key=${API}&language=es-ES&page=1`);
+        
       const topRatedMovies = useFetch(
         `${URL_API}/movie/top_rated?api_key=${API}&language=es-ES&page=1`);
 
@@ -20,7 +21,7 @@ export const Home = () => {
             <SliderMovies movies={newMovies}/>
         </div>
         <div className="mt-10">
-            <div className="grid grid-cols-2 gap-4 justify-items-center ">
+            <div className="grid md:grid-cols-2 xs:grid-cols-1  gap-4  justify-items-center ">
             <div className="justify-center w-9/12 border border-black rounded shadow-xl">
             {/* <div className="box-border md:box-content"> */}
              <MovieList title="Peliculas Populares" movies={popularMovies}/>
