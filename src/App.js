@@ -11,6 +11,8 @@ import { NewMovie } from "./pages/NewMovie";
 import { Popular } from "./pages/Popular";
 import { Header } from "./components/Header";
 import { Movie } from "./pages/Movie";
+import  Search  from "./pages/Search";
+import { Error404 } from "./pages/Movie/Error404";
 
 
 function App() {
@@ -23,8 +25,8 @@ function App() {
          <Route exact path="/new-movie" component={NewMovie}/>
          <Route exact path="/popular" component={Popular}/>
          <Route exact path="/movie/:id" component={Movie}/>
-         {/* <Route exact path="/search" component={Search}/>
-         <Route exact path="*" component={Error404}/> */}
+         <Route exact path="/search" component={Search}/>
+         <Route exact path="*" component={Error404}/>
         </Switch>
       </Router>
     </>

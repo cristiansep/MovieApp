@@ -15,26 +15,34 @@ export const SliderMovies = (props) => {
     const {results} =  movies.result
 
 
-
-    const backdropPath = `https://image.tmdb.org/t/p/original`;
-
     
     return (
         <div>
-            <Carousel autoPlay infiniteLoop  showThumbs={false} showArrows={false} showStatus={false}>
+            <Carousel autoPlay infiniteLoop  showThumbs={false} showArrows={false} showStatus={false} >
                 {
                     results.map(movie => 
                         <div key={movie.id}>
-                            <img 
-                            className="h-md" 
-                            src={`${backdropPath}${movie.backdrop_path}`} 
-                            alt="movies"
-                            />
-                             <p className="legend">{movie.overview}</p>
-                        </div>      
+                        <Movie key={movie.id} movie={movie}/>
+                        <p className="legend" >{movie.overview}</p>   
+                        </div>
                     )
                 }
             </Carousel>
         </div>
+    )
+}
+
+
+
+function Movie(props) {
+
+    const {movie: {backdrop_path}} = props;
+
+    const backdropPath = `https://image.tmdb.org/t/p/original${backdrop_path}`;
+
+    return (
+
+        <div className="h-md bg-cover bg-no-repeat bg-top" style={{backgroundImage: `url('${backdropPath}')`}} />
+
     )
 }

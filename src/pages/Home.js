@@ -1,4 +1,5 @@
 import React from 'react'
+import { Footer } from '../components/Footer';
 import { MovieList } from '../components/MovieList';
 import { SliderMovies } from '../components/SliderMovies'
 import { URL_API, API} from '../config';
@@ -34,6 +35,7 @@ export const Home = () => {
         </div>
       
       </div>
+      <Footer/>
       </>
     )
 }

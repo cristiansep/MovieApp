@@ -29,8 +29,6 @@ function MovieCard(props) {
             <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">{title}</h1>
           </div>
         </div>
-   
-
         </Link>
 
     )
